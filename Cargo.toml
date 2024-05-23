@@ -1,8 +1,18 @@
 [package]
-name = "myutil"
+name = "my-util-rust"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "myutil"
+
+[features]
+default = ["error"]
+full = ["error"]
+error = ["eyre", "color-eyre"]
+
 [dependencies]
+color-eyre = { version = "0.6.3", optional = true }
+eyre = { version = "0.6.12", optional = true }

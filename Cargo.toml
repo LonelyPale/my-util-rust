@@ -16,3 +16,8 @@ error = ["eyre", "color-eyre"]
 [dependencies]
 color-eyre = { version = "0.6.3", optional = true }
 eyre = { version = "0.6.12", optional = true }
+tracing = "0.1.40"
+tracing-core = "0.1.32"
+tracing-error = "0.2.0"
+tracing-log = "0.2.0"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }

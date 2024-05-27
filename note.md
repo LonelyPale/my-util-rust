@@ -24,7 +24,7 @@ edition = "2021"
 name = "myutil"
 ```
 
-# reference 参考
+## reference 参考
 [Package Layout](https://doc.rust-lang.org/cargo/guide/project-layout.html)
 
 [cargo-init(1)](https://doc.rust-lang.org/cargo/commands/cargo-init.html)
@@ -40,6 +40,15 @@ name = "myutil"
 cargo add eyre
 cargo add color-eyre
 
+#日志处理: tracing_log用于兼容标准库的log
+cargo add tracing
+cargo add -F env-filter tracing-subscriber
+cargo add tracing-error
+cargo add tracing-core
+cargo add tracing-log
+
 ```
 
+## reference 参考
+[Command-line feature options](https://doc.rust-lang.org/cargo/reference/features.html#command-line-feature-options)
 

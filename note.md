@@ -37,21 +37,24 @@ name = "myutil"
 # dependencies 依赖
 ```shell
 # 错误处理
-cargo add eyre
-cargo add color-eyre
+cargo add --optional eyre
+cargo add --optional color-eyre
 
 #日志处理: tracing_log用于兼容标准库的log
-cargo add tracing
-cargo add -F env-filter,chrono tracing-subscriber
-cargo add tracing-error
-cargo add tracing-core
-cargo add tracing-log
+cargo add --optional tracing
+cargo add --optional -F env-filter,chrono tracing-subscriber
+cargo add --optional --features env-filter,chrono tracing-subscriber
+cargo add --optional --features "env-filter chrono" tracing-subscriber
+cargo add --optional tracing-error
+cargo add --optional tracing-core
+cargo add --optional tracing-log
 
 #日期时间
-cargo add chrono
+cargo add --optional chrono
+cargo remove chrono
 
 ```
 
 ## reference 参考
 [Command-line feature options](https://doc.rust-lang.org/cargo/reference/features.html#command-line-feature-options)
-
+[Optional dependencies](https://doc.rust-lang.org/cargo/reference/features.html#optional-dependencies)

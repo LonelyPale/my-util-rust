@@ -9,15 +9,19 @@ edition = "2021"
 name = "myutil"
 
 [features]
-default = ["error"]
-full = ["error"]
+default = ["error", "log"]
+full = ["error", "log"]
 error = ["eyre", "color-eyre"]
+log = ["tracing", "tracing-subscriber", "tracing-error", "tracing-core", "tracing-log"]
 
 [dependencies]
-color-eyre = { version = "0.6.3", optional = true }
+# error
 eyre = { version = "0.6.12", optional = true }
-tracing = "0.1.40"
-tracing-core = "0.1.32"
-tracing-error = "0.2.0"
-tracing-log = "0.2.0"
-tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+color-eyre = { version = "0.6.3", optional = true }
+
+# log
+tracing = { version = "0.1.40", optional = true }
+tracing-subscriber = { version = "0.3.18", features = ["env-filter", "chrono"], optional = true }
+tracing-error = { version = "0.2.0", optional = true }
+tracing-core = { version = "0.1.32", optional = true }
+tracing-log = { version = "0.2.0", optional = true }

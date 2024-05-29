@@ -42,10 +42,13 @@ cargo add color-eyre
 
 #日志处理: tracing_log用于兼容标准库的log
 cargo add tracing
-cargo add -F env-filter tracing-subscriber
+cargo add -F env-filter,chrono tracing-subscriber
 cargo add tracing-error
 cargo add tracing-core
 cargo add tracing-log
+
+#日期时间
+cargo add chrono
 
 ```
 

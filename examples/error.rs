@@ -18,9 +18,7 @@ fn print_error(err: &Report) {
 }
 
 fn my_err() -> Report {
-    let err = || -> eyre::Result<()> {
+    || -> eyre::Result<()> {
         Err(eyre::eyre!("error: my error 1"))
-    }().context("my error 2").context("my error 3").unwrap_err();
-
-    err
+    }().context("my error 2").context("my error 3").unwrap_err()
 }

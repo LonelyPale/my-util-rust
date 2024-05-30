@@ -222,7 +222,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "myutil"
+name = "my-util"
 version = "0.1.0"
 dependencies = [
  "color-eyre",

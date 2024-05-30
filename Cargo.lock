@@ -222,7 +222,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "my-util-rust"
+name = "myutil"
 version = "0.1.0"
 dependencies = [
  "color-eyre",

@@ -34,6 +34,7 @@ name = "myutil"
 [Cargo Targets](https://doc.rust-lang.org/cargo/reference/cargo-targets.html)
 
 
+
 # dependencies 依赖
 ```shell
 # 错误处理
@@ -58,3 +59,14 @@ cargo remove chrono
 ## reference 参考
 [Command-line feature options](https://doc.rust-lang.org/cargo/reference/features.html#command-line-feature-options)
 [Optional dependencies](https://doc.rust-lang.org/cargo/reference/features.html#optional-dependencies)
+
+
+
+# cargo publish to crates-io
+
+```shell
+cargo login --registry crates-io
+cargo publish --registry crates-io
+cargo publish --registry crates-io --allow-dirty
+
+```
